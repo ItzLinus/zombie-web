@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>U dead!</title>
+</head>
+<body class="dead">
+    <div class="startscreen d-flex align-items-center justify-content-center min-vh-100">
+        <div class="text-center gameoverheading">
+            <h1> GAME OVER ;( </h1>
+            
+            <h2>Your survived for: <span id="yourtime"></span> seconds!</h2>
+            <div class="buttons text-center">
+                <button type="button" onclick="try_again()" class="btn btn-light btn-lg">Try Again</button>
+            </div>
+        </div>
+</body>
+<script>
+    const gamemode = localStorage.getItem("gamemode");
+    const time = localStorage.getItem("time");
+    document.getElementById('yourtime').innerText = time
+
+    try_again = () => {
+        console.log('Playing again...')
+        location.replace('game.htm')
+    }
+</script>
+
+</html>

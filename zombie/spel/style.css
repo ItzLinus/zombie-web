@@ -1,0 +1,35 @@
+
+.dead {
+    background-image: url('pictures/dead.jpg');
+    background-size: cover;
+}
+.startscreen {
+    background-color: none;
+}
+.heading h1 {
+    color: white;
+    font-size: 90px;
+}
+.heading h2 {
+    color: white;
+    font-size: 45px;
+}
+.gameoverheading h1 {
+    color: white;
+    font-size: 90px;
+
+}
+.gameoverheading h2 {
+    color: rgb(214, 214, 214);
+    font-size: 30px;
+}
+.buttons button {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.game {
+    background-image: url('pictures/bg.jpg');
+    background-size: cover;
+}
