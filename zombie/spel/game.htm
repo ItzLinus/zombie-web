@@ -25,6 +25,19 @@ while (i < 5)
     i += 1;
 }
 
+function getHex(){
+  return '#' + Math.random().toString(16).slice(2, 8);
+}
+function setBackground(){
+  var bgColor = getHex();
+  document.body.style.background=bgColor;
+}
+document.body.onkeyup=function(a){
+  if(a.keyCode == 32){
+    setBackground();
+  document.getElementById("asd").innerHTML = getHex();
+  }
+}
 
 function update()
     {

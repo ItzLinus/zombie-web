@@ -6,33 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>U dead!</title>
+    <title>Zombie Main Menu</title>
 </head>
-<body class="dead">
+<body class="main">
     <div class="startscreen d-flex align-items-center justify-content-center min-vh-100">
         <div class="text-center gameoverheading">
-            <h1> GAME OVER ;( </h1>
+            <h1> Zombie Game </h1>
             
-            <h2>You managed to survive for: <span id="yourtime"></span> seconds!</h2>
+            <p class = main_text>Your objective in this game is to run away from the zombies using your cursor. Yep it's that simple. Now to start the game click on the Start button below! </p>
             <div class="buttons text-center">
-                <button type="button" onclick="try_again()" class="btn btn-light btn-lg">Try Again</button>
-                <button type="button" onclick="main()" class="btn btn-light btn-lg">Main Menu</button>
+                <button type="button" onclick="start_game()" class="btn btn-light btn-lg">Start Game!</button>
             </div>
-        </div>            
+        </div>
 </body>
 <script>
-    const gamemode = localStorage.getItem("gamemode");
-    const time = localStorage.getItem("time");
-    document.getElementById('yourtime').innerText = time
 
-    try_again = () => {
-        console.log('Playing again...')
+    start_game = () => {
+        console.log('Sending user to Main menu...')
         location.replace('game.htm')
-    }
-
-    main = () => {
-        console.log('Sending user to Main menu')
-        location.replace('main_menu.htm')
     }
 
 
